@@ -2,7 +2,7 @@ name: build-and-deploy
 on:
     push:
         branches:
-            - master
+            - main
     repository_dispatch:
         types: [datocms_deploy_request]
 jobs:
