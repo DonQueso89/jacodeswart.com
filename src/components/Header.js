@@ -80,6 +80,29 @@ const Header = props => {
           </li>
         </ul>
       </nav>
+          <ul className="icons">
+            <li>
+              <a
+                href="https://twitter.com/jgdeswart"
+                className="icon fa-twitter" target="_blank" rel="noreferrer"
+              >
+                <span className="label">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/jacodeswart" target="_blank" rel="noreferrer" className="icon fa-instagram">
+                <span className="label">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.uva.nl/profiel/s/w/j.g.deswart/j.g.deswart.html"
+                className="icon fa-university" target="_blank" rel="noreferrer"
+              >
+                <span className="label">UVA</span>
+              </a>
+            </li>
+          </ul>
     </header>
   )
 }

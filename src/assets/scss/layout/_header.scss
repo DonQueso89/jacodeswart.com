@@ -42,7 +42,7 @@
     position: relative;
     margin-top: 3.5rem;
 
-    &:before {
+    &:not(.icons):before {
       content: '';
       display: block;
       position: absolute;
@@ -70,6 +70,7 @@
     border-radius: 100%;
     background-image: url("../../images/mugshot.png");
     background-position: center ;
+    background-size: contain;
 
     .icon {
       &:before {
