@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Link, navigate } from 'gatsby'
+import { navigate } from 'gatsby'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
     <div className="logo">
-      <span className="icon fa-tree"></span>
     </div>
     <div className="content">
       <div className="inner">
@@ -24,16 +23,16 @@ const Header = props => (
               props.onOpenArticle('intro')
             }}
           >
-            Intro
+            About
           </button>
         </li>
         <li>
           <button
             onClick={() => {
-              navigate("/publications/")
+              props.onOpenArticle("publications")
             }}
           >
-            Publications
+            Science
           </button>
         </li>
         <li>
@@ -42,7 +41,7 @@ const Header = props => (
               props.onOpenArticle('publications')
             }}
           >
-            Press
+            Television
           </button>
         </li>
         <li>
@@ -60,7 +59,7 @@ const Header = props => (
               props.onOpenArticle('about')
             }}
           >
-            About
+            Teaching
           </button>
         </li>
         <li>
@@ -69,7 +68,7 @@ const Header = props => (
               props.onOpenArticle('contact')
             }}
           >
-            Contact
+            Music
           </button>
         </li>
       </ul>
