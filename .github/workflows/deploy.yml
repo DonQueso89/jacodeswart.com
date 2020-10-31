@@ -11,6 +11,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v1
+            - run: mkdir src/data
             - run: npm i -g surge
             - run: npm i
             - name: "Build"
