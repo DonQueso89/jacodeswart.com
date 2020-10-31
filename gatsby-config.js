@@ -1,5 +1,4 @@
-require("dotenv").config()
-
+require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
@@ -30,5 +29,13 @@ module.exports = {
         disableLiveReload: true,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+        name: `markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 }

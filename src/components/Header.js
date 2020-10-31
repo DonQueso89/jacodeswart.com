@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import { useContactInfo } from '../queries'
 
 const Header = props => {
   const data = useStaticQuery(graphql`
@@ -10,6 +11,10 @@ const Header = props => {
       }
     }
   `)
+
+  const { email } = useContactInfo()
+
+
   return (
     <header id="header" style={props.timeout ? { display: 'none' } : {}}>
       <div className="logo"></div>
@@ -81,6 +86,14 @@ const Header = props => {
         </ul>
       </nav>
           <ul className="icons">
+            <li>
+              <a
+                href={`mailto:${email}`}
+                className="icon fa-envelope" target="_blank" rel="noreferrer"
+              >
+                <span className="label">UVA</span>
+              </a>
+            </li>
             <li>
               <a
                 href="https://twitter.com/jgdeswart"

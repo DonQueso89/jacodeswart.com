@@ -90,7 +90,11 @@ class Main extends React.Component {
           query={graphql`
             query aboutBody {
               datoCmsAbout {
-                body
+                bodyNode {
+                  childMarkdownRemark {
+                    html
+                  }
+                }
               }
             }
           `}
@@ -106,7 +110,7 @@ class Main extends React.Component {
               <span className="image main">
                 <img src={pic03} alt="" />
               </span>
-              <p>{data.datoCmsAbout.body}</p>
+              <p className="inserted-content" dangerouslySetInnerHTML={{__html: data.datoCmsAbout.bodyNode.childMarkdownRemark.html}}></p>
               {close}
             </article>
           )}

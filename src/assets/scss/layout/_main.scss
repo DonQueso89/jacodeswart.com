@@ -68,7 +68,7 @@
 					height: 2.5rem;
 					border-radius: 100%;
 					background-position: center;
-					background-image: url("../../images/tree.svg");
+					background-image: url("../../images/close-icon.svg");
 					background-size: 20px 20px;
 					background-repeat: no-repeat;
 				}
@@ -107,5 +107,9 @@
 			article {
 				@include padding(2rem, 1.5rem, (1rem, 0, 0.5rem, 0));
 			}
+		}
+
+		.inserted-content img {
+			max-width: 100%;
 		}
 	}
