@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { useContactInfo } from '../queries'
+import { useContactInfo } from '../hooks/useContactInfo'
 
 const Header = props => {
   const data = useStaticQuery(graphql`
@@ -59,7 +59,7 @@ const Header = props => {
           <li>
             <button
               onClick={() => {
-                props.onOpenArticle('publications')
+                props.onOpenArticle('talks')
               }}
             >
               Talks

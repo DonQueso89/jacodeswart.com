@@ -4,17 +4,12 @@ import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 import { StaticQuery, graphql } from 'gatsby'
+import TalksArticle from './talksArticle'
+import CloseButton from "./closeButton"
 
 class Main extends React.Component {
   render() {
-    let close = (
-      <div
-        className="close"
-        onClick={() => {
-          this.props.onCloseArticle()
-        }}
-      ></div>
-    )
+    const close = <CloseButton close={this.props.onCloseArticle} />
 
     return (
       <div
@@ -85,6 +80,10 @@ class Main extends React.Component {
           </p>
           {close}
         </article>
+        <TalksArticle
+          {...this.props}
+          closeCallback={this.props.onCloseArticle}
+        />
 
         <StaticQuery
           query={graphql`
@@ -110,7 +109,12 @@ class Main extends React.Component {
               <span className="image main">
                 <img src={pic03} alt="" />
               </span>
-              <p className="inserted-content" dangerouslySetInnerHTML={{__html: data.datoCmsAbout.bodyNode.childMarkdownRemark.html}}></p>
+              <p
+                className="inserted-content"
+                dangerouslySetInnerHTML={{
+                  __html: data.datoCmsAbout.bodyNode.childMarkdownRemark.html,
+                }}
+              ></p>
               {close}
             </article>
           )}
