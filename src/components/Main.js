@@ -18,12 +18,12 @@ const GenericArticle = ({ title, articleKey, articleData, onCloseArticle, articl
       <span className="image main">
         <img src={articleData.headerimage ? articleData.headerimage.url : pic01} alt="" />
       </span>
-      <p
+      <div
         className="inserted-content"
         dangerouslySetInnerHTML={{
           __html: articleData.bodyNode.childMarkdownRemark.html,
         }}
-      ></p>
+      ></div>
       <CloseButton close={onCloseArticle} />
     </article>
   )
