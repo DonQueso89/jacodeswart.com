@@ -41,7 +41,7 @@ const Header = props => {
           <li>
             <button
               onClick={() => {
-                props.onOpenArticle('publications')
+                props.onOpenArticle('science')
               }}
             >
               Science
@@ -50,7 +50,7 @@ const Header = props => {
           <li>
             <button
               onClick={() => {
-                props.onOpenArticle('publications')
+                props.onOpenArticle('television')
               }}
             >
               Television
@@ -68,7 +68,7 @@ const Header = props => {
           <li>
             <button
               onClick={() => {
-                props.onOpenArticle('about')
+                props.onOpenArticle('teaching')
               }}
             >
               Teaching
@@ -77,7 +77,7 @@ const Header = props => {
           <li>
             <button
               onClick={() => {
-                props.onOpenArticle('contact')
+                props.onOpenArticle('music')
               }}
             >
               Music

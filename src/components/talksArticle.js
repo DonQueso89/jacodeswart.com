@@ -22,7 +22,6 @@ const TalksArticle = ({ closeCallback, ...props }) => {
       },
       [[], []]
     )
-  console.log(filter)
   return (
     <article
       id="talks"
