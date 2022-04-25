@@ -29,13 +29,13 @@ module.exports = {
         disableLiveReload: true,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/data`,
-        name: `markdown-pages`,
-      },
-    },
+    //{
+      //resolve: `gatsby-source-filesystem`,
+      //options: {
+        //path: `${__dirname}/src/data`,
+        //name: `markdown-pages`,
+      //},
+    //},
     `gatsby-transformer-remark`,
   ],
 }
