@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import TalksArticle from './talksArticle'
 import GenericArticle from "./genericArticle"
 import TelevisionArticle from "./TelevisionArticle"
 
@@ -18,11 +17,6 @@ class Main extends React.Component {
           {...this.props}
           closeCallback={this.props.onCloseArticle}
         />
-        <TalksArticle
-          {...this.props}
-          closeCallback={this.props.onCloseArticle}
-        />
-
         <StaticQuery
           query={graphql`
             query aboutBody {

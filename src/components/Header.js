@@ -59,15 +59,6 @@ const Header = props => {
           <li>
             <button
               onClick={() => {
-                props.onOpenArticle('talks')
-              }}
-            >
-              Talks
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => {
                 props.onOpenArticle('teaching')
               }}
             >
