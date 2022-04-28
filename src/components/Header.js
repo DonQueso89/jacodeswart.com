@@ -100,7 +100,7 @@ const Header = props => {
             </li>
             <li>
               <a
-                href="https://www.uva.nl/profiel/s/w/j.g.deswart/j.g.deswart.html"
+                href="https://www.uva.nl/en/profile/s/w/j.g.deswart/j.g.de-swart.html"
                 className="icon fa-university" target="_blank" rel="noreferrer"
               >
                 <span className="label">UVA</span>
